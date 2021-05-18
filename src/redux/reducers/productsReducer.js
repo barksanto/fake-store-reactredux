@@ -10,7 +10,7 @@ const initialState = {
 
 
 // reducer always takes the initial state and the action
-export const productReducer = (state = initialState, { type, payload }) => {
+export const productsReducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case ActionTypes.SET_PRODUCTS:
       return state

@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import ProductComponent from './ProductComponent'
 import axios from 'axios'
-import { setProcucts } from '../redux/actions/productActions'
+import { setProducts } from '../redux/actions/productActions'
 
 const ProductListing = () => {
 
@@ -16,16 +16,16 @@ const ProductListing = () => {
       .catch((err) => {
         console.log(err)
       });
-      //this will go to the action and return the object 
-      // in productAction, that obj will be taken by the reducer
-      //
+    //this will go to the action and return the object 
+    // in productAction, that obj will be taken by the reducer
+    //
     dispatch(setProducts(response.data));
   }
 
   useEffect(() => {
     fetchProducts();
   }, [])
-  console.log(products);
+  console.log("Products: ", products);
 
   return (
     <div className="ui grid container">

@@ -1,11 +1,14 @@
 import React, { useEffect } from 'react'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import ProductComponent from './ProductComponent'
 import axios from 'axios'
+import { setProcucts } from '../redux/actions/productActions'
 
 const ProductListing = () => {
 
   const products = useSelector((state) => state);
+  // to dispatch, we use redux hook called useDispatch
+  const dispatch = useDispatch();
 
   const fetchProducts = async () => {
     const response = await axios
@@ -13,9 +16,11 @@ const ProductListing = () => {
       .catch((err) => {
         console.log(err)
       });
-    console.log(response);
+      //this will go to the action and return the object 
+      // in productAction, that obj will be taken by the reducer
+      //
+    dispatch(setProducts(response.data));
   }
-
 
   useEffect(() => {
     fetchProducts();

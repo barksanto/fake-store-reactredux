@@ -1,11 +1,13 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
+// import { useDispatch, useSelector } from "react-redux";
 
 const ProductDetail = () => {
 
-  const { productId } = useParams();
-  console.log(productId)
+  const { productId } = useParams(); //returns undefined???
+
+  console.log(` Here is the id: ${productId}`)
 
   return (
     <div>

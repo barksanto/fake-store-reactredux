@@ -7,7 +7,7 @@ const ProductDetail = () => {
 
   const { productId } = useParams(); //returns undefined???
 
-  console.log(` Here is the id: ${productId}`)
+  console.log(`Product Id: ${productId}`)
 
   return (
     <div>

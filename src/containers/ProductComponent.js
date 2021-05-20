@@ -7,7 +7,8 @@ const ProductComponent = () => {
   const products = useSelector((state) => state.allProducts.products);
   // const { id, title } = products[0];
   const renderList = products.map((product) => {
-    const { id, title, image, price, category } = product
+    const { id, title, image, price, category } = product; //destructure returned object
+
     return (
       <div className="four wide column" key={id}>
         <Link to={`product/${id}`}>

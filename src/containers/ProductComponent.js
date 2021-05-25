@@ -16,7 +16,7 @@ const ProductComponent = () => {
                 <img src={image} alt={title} />
               </div>
               <div className="content">
-                <div className="header">{title}</div>
+                <div className="header">{title.length > 20 ? title.substring(0, 25) + "..." : title}</div>
                 <div className="meta price">$ {price.toFixed(2)}</div>
                 <div className="meta">{category}</div>
               </div>

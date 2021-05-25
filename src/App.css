@@ -41,3 +41,23 @@
 .loading{
   margin-top: 50px;
 }
+
+/* .product-card{
+  border: 2px solid red;
+  height: 350px;
+  margin-bottom: 15px;
+} */
+
+.image > img{
+  /* height: 200px; */
+  object-fit: cover;
+}
+
+.ui.cards>.card>.image>img{
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.content{
+  max-height: 250px;
+}

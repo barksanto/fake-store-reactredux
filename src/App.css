@@ -50,14 +50,12 @@
 
 .image > img{
   /* height: 200px; */
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .ui.cards>.card>.image>img{
+  height: 200px;
   max-height: 200px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
-.content{
-  max-height: 250px;
-}

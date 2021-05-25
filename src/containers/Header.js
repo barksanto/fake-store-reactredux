@@ -5,7 +5,7 @@ const Header = () => {
     // these classnames are semantic ui names
     <div className="ui fixed menu">
       <div className="ui container center">
-        <h2>FakeShop</h2>
+        <h2>Modern Fabric</h2>
       </div>
     </div>
   )
